@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<title>Atlas website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="webcarto.css">
+
+
+Include Leaflet CSS file in the head section of your document:
+
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+
+
+<body class="w3-light-grey">
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top ">
+  <div class="w3-bar w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>Atlas</b> Gezondheid Almere in kaart </a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">Over ons</a>
+      <a href="#Feitenencijfers" class="w3-bar-item w3-button">Feiten en Cijfers</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img src="img/almereinbeeld.jpg" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>036</b></span> <span class="title">De gezonde stad van de toekomst</span></h1>
+  </div>
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+ 
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+  integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+  crossorigin=""></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+	   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+	   crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+	   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+	   crossorigin=""></script>
+
+
+  <!-- Load Esri Leaflet from CDN -->
+  <script src="https://unpkg.com/esri-leaflet@2.3.2/dist/esri-leaflet.js"
+  integrity="sha512-6LVib9wGnqVKIClCduEwsCub7iauLXpwrd5njR2J507m3A2a4HXJDLMiSZzjcksag3UluIfuW1KzuWVI5n/cuQ=="
+  crossorigin=""></script>
+
+  <!--mapbox-->
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css" rel="stylesheet" />
+
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+  
+
+   <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Over ons</h3>
+    <p>In de gezondheidsatlas van Almere zijn diverse webkaarten te vinden over de gezondheid van de stad. 
+      De gezondheidsatlas van Almere staat in nauw contact met de
+      GGD Regio Flevoland en volgt de richtlijnen en informatie van het RIVM, CBS en de GGD Regio Flevoland.
+  Wij vullen de Gezondheidsatlas regelmatig aan met nieuwe cijfers. Vragen en opmerkingen kunt u mailen naar gezond@almere.nl.</p>
+  </div>
+
+    <!-- Feiten en cijfers Section -->
+    <div class="w3-container w3-padding-15" id="Feitenencijfers">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Feiten en cijfers</h3>
+ 
+        <!-- First Photo Grid-->
+  <div class="w3-row-padding">
+    <!--Esri embed-->
+    <div class="w3-third w3-container w3-margin-bottom">
+      <div class="w3-container w3-white">
+      <div class="embed-container"><iframe width="200" height="100" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Almere wijken" src="https://arcgis.com/apps/Embed/index.html?webmap=da9c3b6f505045d0a18dda9f75bc1744&extent=5.0459,52.2383,5.4861,52.497&zoom=true&previewImage=true&scale=false&disable_scroll=false&theme=light"></iframe></div>
+      <p><b>Wijken van Almere</b></p>
+        <p>Zoom in op Almere en klik op de wijken voor meer informatie. De kaart geeft inzicht over de buurten op het gebied van bevolkingsdichtheid, inwoners naar leeftijdsklasse en de verdeling van man en vrouw.</p>
+      <br></div>
+    </div>
+
+    <!--ESRI WMS with Leaflet-->
+    <div class="w3-third w3-container w3-margin-bottom">
+      <div class="w3-container w3-white">
+
+          <div id="map"></div>
+          <script>
+      const map = L.map('map', {center: [52.371852, 5.221282], zoom: 13
+    });
+
+    L.esri.basemapLayer('Streets').addTo(map);
+
+    var icon = L.icon({
+    iconUrl: 'https://image.flaticon.com/icons/svg/2713/2713175.svg',
+    iconSize: [27, 31],
+    iconAnchor: [13.5, 17.5],
+    popupAnchor: [0, -11]
+  });
+  
+  // a Leaflet marker is used by default to symbolize point features. 
+	var EPS =  L.esri.featureLayer({
+    url: 'https://services.arcgis.com/nSZVuSZjHpEZZbRo/arcgis/rest/services/Kwetsbare_objecten_tbv_COVID19/FeatureServer/0',
+	
+    pointToLayer: function (mytable, latlng) 
+	{
+      return L.marker(latlng, {icon:icon}).bindPopup(mytable.properties.OMSCHRIJVING2);
+    }
+  }).addTo(map);
+
+          </script>
+         
+        <p><b>Kwetsbare locaties van Almere</b></p>
+        <p>Eind februari werd de eerste coronapatiënt van Nederland geconstateerd. Sinds die tijd is het aantal bekende besmettingen in Nederland hard gestegen.
+          Op de kaart vind je de locaties die erg kwetsbaar zijn voor een Corona uitbraak. 
+        </p>
+      </div>
+    </div>
+
+    <!--Geojson with Leaflet-->
+    <div class="w3-third w3-container">
+      <div class="w3-container w3-white">
+      
+        <div id="map2"></div>
+        <!-- data -->
+          <script src="js/NLcorona.js"></script>
+          
+        <script> //map initilizer
+        var map2 = L.map('map2', {center: [52.371852, 5.221282], zoom: 7});
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map2);
+        
+      
+        var geoJsonLayer = L.geoJson(jsondata).addTo(map2);
+        
+        
+        </script>
+        
+        <p><b> GGD-locaties </b></p>
+        <p>Deze kaart toont het aantal GGD kantoren per gemeente. De GGD is er om de ‘volksgezondheid in het werkgebied te beschermen en te bevorderen’. Voor vragen kunt u altijd terecht bij één van de vestigingen.<br><br> </p>
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <div class="w3-container w3-white">
+        <!--mapbox 3D hover-->
+        <div id="map3"></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiamF5bWlzb3dpcm9ubyIsImEiOiJjamg4eG00eWwwNnN4M2RtNnNhamgzZ2MwIn0.CBfM4-mt9D6lrpCqH9v17Q';
+    var map3 = new mapboxgl.Map({
+        container: 'map3',
+        style: 'mapbox://styles/jaymisowirono/ck8bmstgz11ot1iqlw477svv5',
+        zoom: 15,
+        center: [5.217446, 52.366384]
+    });
+ 
+map3.on('load', function() {
+// Add Mapillary sequence layer.
+// https://www.mapillary.com/developer/tiles-documentation/#sequence-layer
+map3.addSource('mapillary', {
+'type': 'vector',
+'tiles': [
+'https://d25uarhxywzl1j.cloudfront.net/v0.1/{z}/{x}/{y}.mvt'
+],
+'minzoom': 6,
+'maxzoom': 14
+});
+map3.addLayer(
+{
+'id': 'mapillary',
+'type': 'line',
+'source': 'mapillary',
+'source-layer': 'mapillary-sequences',
+'layout': {
+'line-cap': 'round',
+'line-join': 'round'
+},
+'paint': {
+'line-opacity': 0.6,
+'line-color': 'rgb(53, 175, 109)',
+'line-width': 2
+}
+},
+'waterway-label'
+);
+});
+ 
+map3.addControl(new mapboxgl.NavigationControl());
+</script>
+        <p><b>Supermarkten in de buurt</b></p>
+        <p>Hover met je muis door Almere in 3D en vind supermarkten in de buurt!
+        Hou je rechtmuis ingedrukt in de kaart om het 3D perspectief te veranderen.<br><br>
+        </p>
+    </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <div class="w3-container w3-white">
+
+        <!--Mangomap heatmap-->
+        <iframe style="display: none;" src="https://mangomap.com/studentsss/maps/0dc54efe-711e-11ea-9a01-06765ea3034e?preview=true#zoom=12&lat=52.353586&lng=5.230865&layergroups=studentsss%3A0dc65dbc-711e-11ea-9a01-06765" allowtransparency="true" scrolling="no" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" oallowfullscreen="" msallowfullscreen="" onload="this.style.display='block';" width="0" height="0" frameborder="0"></iframe>
+ <iframe width="100%" height="340" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://mangomap.com/studentsss/maps/106940/untitled-mapk?preview=true#"></iframe>
+ <p><b>Supermarkten Heatmap</b></p>
+        <p>In de Corona tijden drukte vermijden? Hoe roder de Heatmap, hoe meer supermarkten in de buurt. Wij raden iedereen aan om de grote menigte te vermijden en afstand van elkaar te houden.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <div class="w3-container w3-white">
+        
+<!--ArcGIS Scene-->
+      <div id="tool2"></div>
+        <iframe width="100%" height="340" frameborder="0" scrolling="no" allowfullscreen src="http://arcg.is/0qvWzD"></iframe>
+        <p><b>Groen in de buurt</b></p>
+        <p>Wist u dat groen een positieve effect heeft op de psychologische en fysieke gezondheid? Hover door de kaart en werp een blik op het groen in Almere!</p>
+<br>      </div>
+    </div>
+  </div>
+
+  
+
+<!-- Image of location/map -->
+<div class=" w3-margin" id="contact">
+  <div class="w3-container w3-padding class="w3-image w3-greyscale" style="width:100%;margin-top:48px"></div>
+    <h4>Contact</h4>
+     <div id="mapid"></div>
+  </div>
+<hr>
+
+<!-- End page content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Copyright © 2020 made by Jaymi Sowirono</p>
+</footer>
+<script src="js/Leaflet.js"></script>
+</body>
+</html>

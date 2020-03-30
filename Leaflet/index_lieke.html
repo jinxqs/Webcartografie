@@ -1,0 +1,44 @@
+<html>
+<head><title>Leaflet.js Essentials</title>
+<style>
+    #map { position: absolute; top:0; bottom:0; right:0; left:0;z-index:0}
+	p {position: absolute; top: 0; right: 0; z-index:1; background-color: white}
+
+</style>
+
+</head>
+<body>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+
+<div id="map"></div>
+
+<script src="lieke.js"></script>
+
+<script> //map initilizer
+var map = L.map('map', {center: [ -34.635750180343017, -58.39892758536007],zoom: 12});
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
+
+
+var geojsonMarkerOptions = {
+    radius: 8,
+    fillColor: "#ff7800",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.8
+};
+
+var EPS = L.geoJson(geojson, {
+    pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, geojsonMarkerOptions).bindPopup(feature.properties.ESTACION);
+    }
+}).addTo(map);
+
+</script>
+
+<p><a href="javascript:map.removeLayer(EPS)">hide</a> | <a href="javascript:EPS.addTo(map)">show</a></p>
+
+
+</body>
+</html>

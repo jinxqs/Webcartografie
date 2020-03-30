@@ -1,0 +1,27 @@
+{
+"type": "FeatureCollection",
+"name": "supermarkten almere",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "DEEN Supermarkten", "description": null }, "geometry": { "type": "Point", "coordinates": [ 5.21827010000004, 52.3684926 ] } },
+{ "type": "Feature", "properties": { "Name": "DEEN Supermarkten", "description": null }, "geometry": { "type": "Point", "coordinates": [ 5.2182859, 52.3372435 ] } },
+{ "type": "Feature", "properties": { "Name": "Lidl", "description": null }, "geometry": { "type": "Point", "coordinates": [ 5.2164653, 52.3691324 ] } },
+{ "type": "Feature", "properties": { "Name": "DEEN Supermarkten", "description": null }, "geometry": { "type": "Point", "coordinates": [ 5.2507589, 52.3812012 ] } },
+{ "type": "Feature", "properties": { "Name": "Jumbo", "description": null }, "geometry": { "type": "Point", "coordinates": [ 5.2239208, 52.3850444 ] } },
+{ "type": "Feature", "properties": { "Name": "Albert Heijn", "description": null }, "geometry": { "type": "Point", "coordinates": [ 5.2263889, 52.3419444 ] } },
+{ "type": "Feature", "properties": { "Name": "Malinka B.V. Almere", "description": null }, "geometry": { "type": "Point", "coordinates": [ 5.215824, 52.3691187 ] } },
+{ "type": "Feature", "properties": { "Name": "ALDI", "description": null }, "geometry": { "type": "Point", "coordinates": [ 5.2208254, 52.3745094 ] } },
+{ "type": "Feature", "properties": { "Name": "Tanger Markt", "description": null }, "geometry": { "type": "Point", "coordinates": [ 5.2160292, 52.369227 ] } },
+{ "type": "Feature", "properties": { "Name": "DEEN Supermarkten", "description": null }, "geometry": { "type": "Point", "coordinates": [ 5.256205, 52.3656006 ] } },
+{ "type": "Feature", "properties": { "Name": "Toko Gembira", "description": null }, "geometry": { "type": "Point", "coordinates": [ 5.2213889, 52.3727778 ] } },
+{ "type": "Feature", "properties": { "Name": "Amazing Oriental Almere", "description": null }, "geometry": { "type": "Point", "coordinates": [ 5.2203261, 52.3746654 ] } },
+{ "type": "Feature", "properties": { "Name": "Toko Suripoort", "description": null }, "geometry": { "type": "Point", "coordinates": [ 5.15009380000004, 52.3462073 ] } },
+{ "type": "Feature", "properties": { "Name": "TIKI TAKA TOKO", "description": null }, "geometry": { "type": "Point", "coordinates": [ 5.275677, 52.3963824 ] } },
+{ "type": "Feature", "properties": { "Name": "Al-Sheikh", "description": null }, "geometry": { "type": "Point", "coordinates": [ 5.2202781, 52.3870792 ] } },
+{ "type": "Feature", "properties": { "Name": "Tigry's Tropical Supplies & Services", "description": null }, "geometry": { "type": "Point", "coordinates": [ 5.30386410000006, 52.4034484 ] } },
+{ "type": "Feature", "properties": { "Name": "Java2go", "description": null }, "geometry": { "type": "Point", "coordinates": [ 5.20740150000006, 52.3822371 ] } },
+{ "type": "Feature", "properties": { "Name": "Toko Combe", "description": null }, "geometry": { "type": "Point", "coordinates": [ 5.276797, 52.395438 ] } },
+{ "type": "Feature", "properties": { "Name": "TOKO KAMPOENG", "description": null }, "geometry": { "type": "Point", "coordinates": [ 5.2692072, 52.3680776 ] } },
+{ "type": "Feature", "properties": { "Name": "Toko Amardjoti", "description": null }, "geometry": { "type": "Point", "coordinates": [ 5.21710370000005, 52.3378437 ] } }
+]
+}
